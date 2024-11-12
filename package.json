@@ -1,0 +1,32 @@
+{
+    "name": "deployer-monitor",
+    "version": "1.0.0",
+    "description": "A service to monitor PM2 processes and post their status to an external API.",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js --processName $PROCCESS_NAME --interval 60000",
+        "dev": "nodemon src/index.js --processName $PROCCESS_NAME --interval 60000"
+    },
+    "dependencies": {
+        "pm2": "^5.2.2",
+        "axios": "^1.4.0",
+        "yargs": "^17.6.2",
+        "prompt-sync": "^4.2.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/eddienakamoto/deployer-monitor.git"
+    },
+    "keywords": [
+        "pm2",
+        "monitoring",
+        "system-service",
+        "nodejs",
+        "logging"
+    ],
+    "author": "Edward",
+    "license": "MIT"
+}
